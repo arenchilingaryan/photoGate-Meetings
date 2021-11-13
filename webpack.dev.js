@@ -9,7 +9,7 @@ module.exports = merge(common, {
       directory: path.join(__dirname, 'dist'),
     },
     compress: true,
-    port: 3003,
+    port: 3004,
   },
   module: {
     rules: [

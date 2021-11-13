@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Meetings from './components/Meetings';
+import Landing from './components/Landing';
 
-ReactDOM.render(<Meetings />, document.getElementById('root'));
+ReactDOM.render(<Landing />, document.getElementById('root'));
