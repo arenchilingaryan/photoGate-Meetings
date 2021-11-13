@@ -1,28 +1,28 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { ModuleFederationPlugin } = require('webpack').container
+const { ModuleFederationPlugin } = require('webpack').container;
 
-const deps = require("./package.json").dependencies;
+const deps = require('./package.json').dependencies;
 module.exports = {
   entry: path.resolve(__dirname, 'src/index.tsx'),
   plugins: [
     new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'public/index.html') }),
     new ModuleFederationPlugin({
-      name: "Meetings",
-      filename: "main.bundle.js",
+      name: 'Meetings',
+      filename: 'main.bundle.js',
       remotes: {},
       exposes: {
-        './Meetings': './src/components/Meetings.tsx'
+        './Meetings': './src/components/Meetings.tsx',
       },
       shared: {
         ...deps,
         react: {
           singleton: true,
-          requiredVersion: deps.react
+          requiredVersion: deps.react,
         },
-        "react-dom": {
+        'react-dom': {
           singleton: true,
-          requiredVersion: deps["react-dom"],
+          requiredVersion: deps['react-dom'],
         },
       },
     }),
