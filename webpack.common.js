@@ -8,11 +8,11 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'public/index.html') }),
     new ModuleFederationPlugin({
-      name: 'Landing',
+      name: 'Meetings',
       filename: 'main.bundle.js',
       remotes: {},
       exposes: {
-        './Landing': './src/components/Landing.tsx',
+        './Meetings': './src/components/Meetings.tsx',
       },
       shared: {
         ...deps,

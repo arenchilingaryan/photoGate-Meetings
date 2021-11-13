@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
 
-const Landing = () => {
+const Meetings = () => {
   return (
     <div className="div" style={{ fontSize: '100px' }}>
-      LANDING
+      Meetings
     </div>
   );
 };
 
-export default Landing;
+export default Meetings;
