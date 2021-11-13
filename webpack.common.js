@@ -11,16 +11,16 @@ module.exports = {
       name: "Landing",
       filename: "main.bundle.js",
       remotes: {},
-      exposes: {},
+      exposes: {
+        './Landing': './src/components/Landing.tsx'
+      },
       shared: {
         ...deps,
         react: {
           singleton: true,
-          requiredVersion: deps.react,
-          eager: true
+          requiredVersion: deps.react
         },
         "react-dom": {
-          eager: true,
           singleton: true,
           requiredVersion: deps["react-dom"],
         },
@@ -30,8 +30,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[hash:8].js',
-    sourceMapFilename: '[name].[hash:8].map',
-    chunkFilename: '[id].[hash:8].js'
+    // sourceMapFilename: '[name].[hash:8].map',
+    // chunkFilename: '[id].[hash:8].js'
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.jsx'],
