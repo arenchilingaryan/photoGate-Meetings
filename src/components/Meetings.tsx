@@ -4,7 +4,7 @@ import './App.css';
 
 const Meetings = () => {
   return (
-    <BrowserRouter basename='/meetings'>
+    <BrowserRouter basename="/meetings">
       <div className="div" style={{ fontSize: '100px' }}>
         Meetings
         <Link to="/one">ONE</Link>
